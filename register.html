@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    
+</head>
+<body class="reg-body w-100 bg-primary d-flex justify-content-center mt-4 " style="height: 100vh;">
+    <div class="reg-container d-flex flex-column p-4" style="width:fit-content">
+        <h2 style="font-size: 25;">Create an acoount</h2>
+        <form action=""  class="d-flex flex-column">
+         <span>EMAIL</span>
+         <input type="text">
+         <span>USERNAME</span>
+         <input type="text">
+         <span>PASSWORD</span>
+         <input type="text">
+         <span>DATE OF BIRTH</span>
+         <div class="sele d-flex justify-content-between mb-3">
+            <select id="months">
+            
+         </select>
+         <select id="day">
+
+         </select>
+         <select id="year"> 
+
+         </select>
+         </div>
+         <input type="button" value="Continue" style="border-radius: 5px;" class="con">
+         
+
+
+        </form>
+        <a href="./login.html">Already have an account?</a>
+        <span> By resgistering,you agree of Discords <span class="colour">Terms of Service</span>and <span class="colour">  Privacy Policy</span></span>
+       
+
+        
+    </div>
+    <script>
+    let months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+     let selectb=document.getElementById("months");
+     months.map((item)=>{
+        let option=document.createElement("option")
+    option.innerText=item;
+           selectb.appendChild(option)
+     })  
+
+
+     let day=document.getElementById("day")
+     for(i=1;i<31;i++)
+     {
+        let option2=document.createElement("option")
+        option2.innerText=i;
+        day.appendChild(option2)
+     }
+
+     let year=document.getElementById("year")
+     for(j=2019;j>1780;j--)
+     {
+         let option3=document.createElement("option")
+         option3.innerText=j
+         year.appendChild(option3)
+     }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
